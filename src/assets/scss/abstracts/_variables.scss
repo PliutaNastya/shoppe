@@ -1,0 +1,71 @@
+
+:root {
+	/* MAIN COLORS */
+	--color-accent: #a18a68;
+	--color-white: #ffffff;
+	--color-black: #000000;
+
+	/* NEUTRAL COLORS */
+	--color-dark-gray: #707070;
+	--color-gray: #d8d8d8;
+	--color-light-gray: #efefef;
+
+	/* SERVICE COLORS */
+	--color-error: #db2700;
+
+	/* Light theme specific */
+	--color-background: #ffffff;
+	--color-text: #000000;
+	--color-bg-accent: #edd9bb;
+
+	/* Fonts */
+	--primary-font: "DM Sans", sans-serif;
+	--secondary-font: "Allerta Stencil", sans-serif;
+
+	/* === FONT WEIGHT === */
+	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-bold: 700;
+
+	/* FONT PROPERTIES */
+	--font-heading-1-size: 33px;
+	--font-heading-1-weight: var(--font-weight-medium);
+	--font-heading-1-line-height: 1;
+
+	--font-heading-2-size: 26px;
+	--font-heading-2-weight: var(--font-weight-regular);
+	--font-heading-2-line-height: 1.35; /* 35 / 26 */
+
+	--font-heading-3-size: 20px;
+	--font-heading-3-weight: var(--font-weight-regular);
+	--font-heading-3-line-height: 1.3; /* 26 / 20 */
+
+	--font-heading-4-size: 20px;
+	--font-heading-4-weight: var(--font-weight-medium);
+	--font-heading-4-line-height: 1; /* 20 / 20 */
+
+	--font-heading-5-size: 16px;
+	--font-heading-5-weight: var(--font-weight-regular);
+	--font-heading-5-line-height: 1.6875; /* 27 / 16 */
+
+	--font-body-large-size: 16px;
+	--font-body-large-weight: var(--font-weight-bold);
+	--font-body-large-line-height: 1;
+
+	--font-body-medium-size: 14px;
+	--font-body-medium-weight: var(--font-weight-regular);
+	--font-body-medium-line-height: 1;
+
+	--font-body-small-size: 12px;
+	--font-body-small-weight: var(--font-weight-regular);
+	--font-body-small-line-height: 1.6667; /* 20 / 12 */
+}
+
+[data-theme="dark"] {
+	--color-background: #000000;
+	--color-text: #ffffff;
+
+	--color-dark-gray: #efefef;
+	--color-gray: #707070;
+	--color-light-gray: #3a3a3a;
+}
