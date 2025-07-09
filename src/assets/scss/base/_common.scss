@@ -1,0 +1,55 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/extends" as *;
+
+.subtitle {
+	line-height: 1.4;
+	@include fluid-font(22, 26);
+}
+.likes, .comments{
+	display: flex;
+	align-items: center;
+	column-gap: rem(4);
+	transition: translate 0.3s ease-in-out;
+	img {
+		width: 21px;
+		aspect-ratio: 1;
+		object-fit: contain;
+	}
+
+	@media (any-hover: hover), (pointer: fine) {
+		&:hover {
+			translate: 0px 3px;
+		}
+	}
+}
+.error {
+	position: absolute;
+	top: 100%;
+	translate: 0px 5px;
+	color: var(--color-error);
+}
+// ============================================
+/* Chrome, Edge, Safari */
+.scrollable {
+	overflow: auto;
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-accent) var(--color-light-gray);
+}
+/* Webkit (Chrome, Safari) */
+.scrollable::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+	background-color: var(--color-accent);
+	border-radius: 4px;
+	border: none;
+}
+.scrollable::-webkit-scrollbar-track {
+	background: var(--color-light-gray);
+}
+.scrollable::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-accent);
+}
