@@ -1,6 +1,12 @@
+import HeroSlider from "./components/HeroSlider"
+
 function Home() {
 	return (
-		<div>Home</div>
+		<section className="hero">
+			<div className="hero__container">
+				<HeroSlider />
+			</div>
+		</section>
 	)
 }
 
