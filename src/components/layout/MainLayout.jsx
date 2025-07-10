@@ -9,7 +9,7 @@ function MainLayout() {
 			<Header />
 			<main>
 				<Outlet />
-				<IconsPreview />
+				{/* <IconsPreview /> */}
 			</main>
 			<Footer />
 		</>

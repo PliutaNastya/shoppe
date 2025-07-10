@@ -3,10 +3,10 @@
 @use "../abstracts/functions" as *;
 @use "../abstracts/extends" as *;
 
+// ===================================================
 .hero {
-	padding-block: rem(50);
-}
-.hero__container {
+	padding-block-start: rem(50);
+	@include clamp("padding-block-end", 25px, 5vw, 50px);
 }
 .slide-bg {
 	position: absolute;
@@ -18,8 +18,6 @@
 		@extend %img-cover;
 	}
 }
-.swiper {
-}
 .swiper-wrapper {
 	height: 100%;
 	min-height: rem(646);
@@ -30,19 +28,123 @@
 	border-radius: 16px;
 	overflow: hidden;
 	align-content: center;
+	cursor: grab;
 }
 .slide-content {
 	color: var(--color-white);
 	line-height: 1.3;
-	@include clamp('padding', 15px, 5vw, 40px)
+	@include clamp("padding", 15px, 5vw, 40px);
 }
 .slide-title {
 	font-size: rem(33);
 	font-weight: 500;
+
+	&:not(:last-child) {
+		margin-block-end: rem(8);
+	}
 }
 .slide-price {
 	font-size: rem(26);
+
+	&:not(:last-child) {
+		@include clamp("margin-block-end", 16px, 3vw, 50px);
+	}
 }
 .slide-button {
+	position: relative;
+	border-radius: rem(6);
+	border: 2px solid var(--color-white);
+	padding: rem(13) rem(30);
 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-size: rem(20);
+	font-weight: 700;
+	overflow: hidden;
+	transition: border-color 0.3s linear;
+
+	span {
+		position: relative;
+		z-index: 3;
+		transition: color 0.3s linear;
+	}
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: var(--color-background);
+		translate: 0% 100%;
+		transition: translate 0.3s linear;
+	}
+
+	&:hover {
+		border-color: var(--color-accent);
+
+		&::before {
+			translate: 0% 0%;
+		}
+
+		span {
+			color: var(--color-accent);
+		}
+	}
+}
+.swiper-pagination {
+	position: relative;
+	z-index: 5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 15px;
+	translate: 0px -200%;
+}
+.swiper-pagination-bullet {
+	position: relative;
+	width: rem(18);
+	aspect-ratio: 1;
+	border-radius: 50%;
+	cursor: pointer;
+	border: 1px solid transparent;
+	transition: border 0.3s ease-in-out;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: rem(10);
+		aspect-ratio: 1;
+		border-radius: 50%;
+		background-color: var(--color-white);
+		transition: background-color 0.3s ease-in-out;
+	}
+
+	&:hover::before {
+		background-color: var(--color-bg-accent);
+	}
+}
+.swiper-pagination-bullet-active {
+	background-color: transparent;
+	border: 1px solid var(--color-white);
+
+	&::before {
+		background-color: transparent;
+	}
+}
+// ===================================================
+.latest-products {
+	@include clamp("padding-block-start", 25px, 5vw, 65px);
+	@include clamp("padding-block-end", 25px, 5vw, 150px);
+}
+.latest-products__container {
+	.block-header {
+		@include clamp("margin-block-end", 25px, 5vw, 50px);
+	}
 }

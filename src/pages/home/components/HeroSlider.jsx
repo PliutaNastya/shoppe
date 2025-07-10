@@ -5,7 +5,6 @@ import { EffectFade } from 'swiper/modules'
 
 import 'swiper/css'
 import 'swiper/css/parallax'
-import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
 import { slidesContent } from '../utils'
 
@@ -34,11 +33,11 @@ export default function ParallaxSlider() {
 							<p className="slide-price" data-swiper-parallax="-200">
 								{slide.price}
 							</p>
-							<button type="button" className='slide-button'>View Product</button>
+							<button type="button" data-swiper-parallax="-300" className='slide-button'><span>View Product</span></button>
 						</div>
 					</SwiperSlide>
 				))
 			}
 		</Swiper>
-	);
+	)
 }
