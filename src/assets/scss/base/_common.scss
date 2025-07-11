@@ -71,6 +71,13 @@
 	}
 }
 // ============================================
+.spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5rem;
+}
+// ============================================
 /* Chrome, Edge, Safari */
 .scrollable {
 	overflow: auto;
