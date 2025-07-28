@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/extends" as *;
+
+.not-found {
+	padding-block: rem(50);
+}
+.not-found__container {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	row-gap: rem(25);
+
+	p {
+		color: var(--color-gray);
+		font-size: rem(20);
+		line-height: 1.3;
+	}
+}

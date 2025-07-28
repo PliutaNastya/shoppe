@@ -28,7 +28,7 @@ function NewsletterForm() {
 	}
 	return (
 		<form onSubmit={handleSubmit} className="news-form">
-			<input type="text" name="email" id="email" placeholder="Give an email, get the newsletter." onChange={handleChange} />
+			<input type="text" name="email" id="email" value={email} placeholder="Give an email, get the newsletter." onChange={handleChange} />
 			<button type="submit"><Icon name="arrow-icon" color="#707070" /></button>
 			{error && <ErrorMessage title={error} />}
 		</form>

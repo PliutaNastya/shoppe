@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/extends" as *;
+
+.privacy {
+	@include clamp("padding-block-start", 50px, 5vw, 100px);
+	@include clamp("padding-block-end", 50px, 5vw, 250px);
+}
+.privacy__container {
+	max-width: rem(670);
+	margin-inline: auto;
+	.title {
+		text-align: center;
+	}
+	.title,
+	.text {
+		&:not(:last-child) {
+			@include clamp("margin-block-end", 15px, 3vw, 39px);
+		}
+	}
+	.subtitle {
+		&:not(:last-child) {
+			@include clamp("margin-block-end", 10px, 1vw, 25px);
+		}
+	}
+	ul {
+		padding-inline-start: rem(40);
+		list-style: disc;
+		li {
+			line-height: 1.7;
+			list-style: disc;
+			@include fluid-font(14, 16);
+
+			&:not(:last-child) {
+				@include clamp("margin-block-end", 8px, 1vw, 15px);
+			}
+		}
+	}
+}
